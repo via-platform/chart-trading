@@ -1,0 +1,108 @@
+@import "variables";
+@import "ui-variables";
+
+.chart
+{
+    .chart-axis
+    {
+        .chart-order-flag
+        {
+            rect
+            {
+                fill: #FFF;
+            }
+
+            text
+            {
+                fill: #333;
+                font-size: 12px;
+                font-weight: 700;
+                font-family: 'Inconsolata';
+            }
+        }
+    }
+
+    .panel .chart-order-tools
+    {
+        position: absolute;
+        top: 0;
+        right: 180px;
+        height: 21px;
+        background: @pane-background-color;
+        padding: 1px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 700;
+        font-family: 'Inconsolata';
+        line-height: 19px;
+        user-select: none;
+        cursor: row-resize;
+
+        .base
+        {
+            background: #FFF;
+            color: @primary-color-up;
+            padding: 0 6px;
+        }
+
+        .estimate
+        {
+            background: @primary-color-up;
+            color: #FFF;
+            padding: 0 6px;
+            margin-left: 1px;
+        }
+
+        .cancel
+        {
+            margin-left: 1px;
+            height: 19px;
+            width: 19px;
+            background: url('via://charts/images/close.svg') 5px 5px no-repeat @primary-color-up;
+            background-size: 9px auto;
+            cursor: default;
+
+            &:hover
+            {
+                background-color: darken(@primary-color-up, 25%);
+            }
+        }
+
+        &.hide
+        {
+            display: none;
+        }
+
+        &.sell
+        {
+            .base
+            {
+                color: @primary-color-down;
+            }
+
+            .estimate, .cancel
+            {
+                background-color: @primary-color-down;
+            }
+
+            .cancel:hover
+            {
+                background-color: darken(@primary-color-down, 25%);
+            }
+        }
+    }
+
+    .panel .layer.chart-order-line
+    {
+        path
+        {
+            stroke: #FFF;
+            fill: transparent;
+            stroke-width: 1px;
+            stroke-dasharray: 2;
+            pointer-events: none;
+        }
+    }
+}
