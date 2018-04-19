@@ -1,44 +1,44 @@
 {
-    "name": "chart-trading",
-    "version": "0.1.1",
-    "description": "Add trading and order management functionality to the charts package.",
-    "main": "./lib/main",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "via",
-        "trading",
-        "chart"
-    ],
-    "repository": "https://github.com/via-platform/chart-trading",
-    "author": "Dakota Gordon",
-    "engines": {
-        "via": "^0.6.0-alpha"
-    },
-    "dependencies": {
-        "underscore-plus": "^1.0.0",
-        "etch": "^0.12.7"
-    },
-    "consumedServices": {
-        "charts": {
-            "versions": {
-                "^0.1.0": "consumeCharts"
-            }
-        }
-    },
-    "configSchema": {
-        "showPendingOrders": {
-            "type": "boolean",
-            "default": true
-        },
-        "showOpenOrders": {
-            "type": "boolean",
-            "default": true
-        },
-        "showFills": {
-            "type": "boolean",
-            "default": true
-        }
+  "name": "chart-trading",
+  "version": "0.1.2",
+  "description": "Add trading and order management functionality to the charts package.",
+  "main": "./lib/main",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "via",
+    "trading",
+    "chart"
+  ],
+  "repository": "https://github.com/via-platform/chart-trading",
+  "author": "Dakota Gordon",
+  "engines": {
+    "via": "^0.6.0-alpha"
+  },
+  "dependencies": {
+    "underscore-plus": "^1.0.0",
+    "etch": "^0.12.7"
+  },
+  "consumedServices": {
+    "charts": {
+      "versions": {
+        "^0.1.0": "consumeCharts"
+      }
     }
+  },
+  "configSchema": {
+    "showPendingOrders": {
+      "type": "boolean",
+      "default": true
+    },
+    "showOpenOrders": {
+      "type": "boolean",
+      "default": true
+    },
+    "showFills": {
+      "type": "boolean",
+      "default": true
+    }
+  }
 }
