@@ -26,5 +26,19 @@
                 "^0.1.0": "consumeCharts"
             }
         }
+    },
+    "configSchema": {
+        "showPendingOrders": {
+            "type": "boolean",
+            "default": true
+        },
+        "showOpenOrders": {
+            "type": "boolean",
+            "default": true
+        },
+        "showFills": {
+            "type": "boolean",
+            "default": true
+        }
     }
 }

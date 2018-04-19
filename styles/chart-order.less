@@ -50,9 +50,11 @@
         .estimate
         {
             background: @primary-color-up;
-            color: #FFF;
+            color: @text-color;
             padding: 0 6px;
             margin-left: 1px;
+            position: relative;
+            cursor: default;
         }
 
         .cancel
@@ -66,13 +68,42 @@
 
             &:hover
             {
-                background-color: darken(@primary-color-up, 25%);
+                background-color: darken(@primary-color-up, 20%);
             }
         }
 
         &.hide
         {
             display: none;
+        }
+
+        &.pending
+        {
+            .estimate
+            {
+                &::after
+                {
+                    pointer-events: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    content: "Transmit";
+                    background-color: darken(@primary-color-up, 20%);
+                    color: @text-color;
+                    text-align: center;
+                    display: none;
+                }
+
+                &:hover
+                {
+                    &::after
+                    {
+                        display: block;
+                    }
+                }
+            }
         }
 
         &.sell
@@ -82,14 +113,14 @@
                 color: @primary-color-down;
             }
 
-            .estimate, .cancel
+            .estimate, .cancel, .estimate::after
             {
                 background-color: @primary-color-down;
             }
 
             .cancel:hover
             {
-                background-color: darken(@primary-color-down, 25%);
+                background-color: darken(@primary-color-down, 20%);
             }
         }
     }
