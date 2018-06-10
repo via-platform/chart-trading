@@ -1,6 +1,6 @@
 {
   "name": "chart-trading",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Add trading and order management functionality to the charts package.",
   "main": "./lib/main",
   "scripts": {
